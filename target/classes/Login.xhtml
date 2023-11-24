@@ -1,0 +1,30 @@
+<ui:composition
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	
+	<ui:define name="titulo">Login</ui:define>
+		<ui:define name="corpo">
+			
+			<h:form id="frm">
+				<h1 style="display:flex;justify-content:center;margin-bottom:50px;">Faça Login</h1>
+				
+				<h:panelGrid columns="2" styleClass="grid-login">	
+				
+					<p:outputLabel value="E-mail"/>
+					<p:inputText size="30"/>
+					
+					<p:outputLabel value="Password"/>
+					<p:password size="30"/>
+				
+					<h:panelGroup/>
+					
+					<p:commandButton value="Entrar" style="background-color:#ee4036;border:none; margin-top:15px;"/>
+				</h:panelGrid>
+			</h:form>
+		
+	</ui:define>
+</ui:composition>

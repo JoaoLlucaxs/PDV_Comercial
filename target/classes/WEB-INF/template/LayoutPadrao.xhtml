@@ -1,0 +1,57 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title><ui:insert name="titulo">Sistema de Pedido de Venda</ui:insert></title>
+	<h:outputStylesheet library="css" name="sistema.css"/>
+</h:head>
+
+<h:body>
+
+	<header>
+		<div>
+		<h:link outcome="/Home">
+			<h:graphicImage library="images" name="logocomercial.png" style="width:200px;"/>
+		</h:link>
+		</div>
+		<div style="float:right;margin-right:110px;">
+			<span>Olá Usuário!</span>
+			<h:form>
+				<p:menubar styleClass="menu-sistema" style="margin-left:3px">
+				<p:submenu label="Cadastros" style="background-color:#c1ff72; border:5px;">
+					<p:menuitem value="Clientes"/>
+					<p:menuitem value="Usuários"/>
+					<p:separator/>
+					<p:menuitem value="Categorias"/>
+					<p:menuitem value="Produtos" outcome="/produtos/PesquisaProduto"/>
+				</p:submenu>
+				<p:submenu label="Pedidos" style="background-color:#c1ff72; border:2px">
+					<p:menuitem value="Novo Pedido" outcome="/pedidos/PesquisaPedido"/>
+					<p:menuitem value="Pesquisa" outcome="/pedidos/PesquisaPedido"/>
+				</p:submenu>
+					<p:menuitem value="Sair" style="background-color:#ccc"/>
+				</p:menubar>
+			</h:form>
+		</div>
+		
+	</header>
+	
+	
+	<div id="conteudo">
+		<ui:insert name="corpo"></ui:insert>
+	</div>
+	
+	<p:separator style="margin-top:20px;"/>
+	
+	<footer>
+		<p>Sistema completo para gestão de empresa</p>
+		<a href="https://www.linkedin.com/in/jo%C3%A3o-lucas-queiroz/" target="_blank">@João Lucas Queiroz</a>
+	</footer>
+</h:body>
+
+</html>
