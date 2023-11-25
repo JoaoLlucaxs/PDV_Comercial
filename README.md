@@ -26,7 +26,7 @@
 ## Ainda não resolveu?
     
 Acesse meu instagram na aba (Dicas 🤯) passo a passo sobre importar um projeto 
-
+(https://www.instagram.com/_o_softwaredev/)
 ## Etiquetas
 
 Adicione etiquetas de algum lugar, como: [shields.io](https://shields.io/)
