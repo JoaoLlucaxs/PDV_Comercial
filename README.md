@@ -2,7 +2,7 @@
 
 ## Gestão Comercial para empresas
 
-- Sistema segura com Login e senha
+- Sistema seguro com Login e senha
 - Cadastro de Produtos
 - Cadastro de Clientes
 - Cadastro de Fornecedores
