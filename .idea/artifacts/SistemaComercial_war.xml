@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" external-system-id="Maven" name="SistemaComercial:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>SistemaComercial</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="SistemaComercial.war">
+      <element id="artifact" artifact-name="SistemaComercial:war exploded" />
+    </root>
+  </artifact>
+</component>
