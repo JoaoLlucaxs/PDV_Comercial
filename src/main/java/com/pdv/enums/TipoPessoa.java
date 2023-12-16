@@ -1,4 +1,4 @@
-package com.pdv.model;
+package com.pdv.enums;
 
 public enum TipoPessoa {
     FISICA,

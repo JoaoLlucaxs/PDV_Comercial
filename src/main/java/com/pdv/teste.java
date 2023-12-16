@@ -1,7 +1,7 @@
 package com.pdv;
 
 import com.pdv.model.Cliente;
-import com.pdv.model.TipoPessoa;
+import com.pdv.enums.TipoPessoa;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

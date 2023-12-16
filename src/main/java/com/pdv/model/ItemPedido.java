@@ -1,18 +1,29 @@
 package com.pdv.model;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Objects;
 
+@Entity
+@Table(name = "item_pedido")
 public class ItemPedido implements Serializable {
 
     private static final long serialVersionUID=1L;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(nullable = false,length = 3)
     private Integer quantidade;
+    @Column(name = "valor_unitario", nullable = false,precision = 10,scale = 2)
     private BigDecimal valorUnitario;
+    @ManyToOne
+    @JoinColumn(name = "produto_id")
     private Produto produto;
-
+    @ManyToOne
+    @JoinColumn(name = "pedido_id")
+    private Pedido pedido;
     public Long getId() {
         return id;
     }
@@ -43,6 +54,14 @@ public class ItemPedido implements Serializable {
 
     public void setProduto(Produto produto) {
         this.produto = produto;
+    }
+
+    public Pedido getPedido() {
+        return pedido;
+    }
+
+    public void setPedido(Pedido pedido) {
+        this.pedido = pedido;
     }
 
     @Override

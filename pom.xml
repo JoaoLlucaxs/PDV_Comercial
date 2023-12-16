@@ -17,6 +17,14 @@
 		  <version>12.0.0</version>
 		  <scope>compile</scope>
 	  </dependency>
+
+	  <!-- Implementacao do Bean Validation -->
+	  <dependency>
+		  <groupId>org.hibernate</groupId>
+		  <artifactId>hibernate-validator</artifactId>
+		  <version>5.0.1.Final</version>
+		  <scope>compile</scope>
+	  </dependency>
 	  
 	  <!-- WELD Implementação do CDI-->
 	  <dependency>
@@ -43,6 +51,12 @@
 		  <groupId>org.hibernate</groupId>
 		  <artifactId>hibernate-entitymanager</artifactId>
 		  <version>5.6.15.Final</version>
+	  </dependency>
+
+	  <dependency>
+		  <groupId>org.hibernate</groupId>
+		  <artifactId>hibernate-c3p0</artifactId>
+		  <version>6.2.6.Final</version>
 	  </dependency>
 
 	  <dependency>
