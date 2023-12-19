@@ -45,7 +45,7 @@ Adicione etiquetas de algum lugar, como: [shields.io](https://shields.io/)
 
 **Front-end** : JSF , Primefaces versão 12
 
-**Back-end:** Jakarta , Jpa , Hibernate, PostgresSQL
+**Back-end:** Jakarta , Jpa , Hibernate, MySQL
 
 **Log**: Log4j
 
