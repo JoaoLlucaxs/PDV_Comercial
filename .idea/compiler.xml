@@ -9,8 +9,5 @@
         <module name="SistemaComercial" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="SistemaComercial" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
