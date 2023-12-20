@@ -11,4 +11,10 @@
 			<default-locale>pt_BR</default-locale>
 		</locale-config>
 	</application>
+
+	<factory>
+		<exception-handler-factory>
+			com.pdv.utils.jsfExceptionHandlerFactory
+		</exception-handler-factory>
+	</factory>
 </faces-config>

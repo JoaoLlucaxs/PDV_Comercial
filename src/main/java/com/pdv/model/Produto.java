@@ -1,6 +1,9 @@
 package com.pdv.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Objects;
@@ -16,7 +19,10 @@ public class Produto implements Serializable {
     private String sku;
     @Column(name = "valor_unitario",nullable = false,precision = 10,scale = 2)
     private BigDecimal valorUnitario;
+    @NotNull
     @Column(name="quantidade_estoque", nullable = false, length = 5)
+    @Min(0)
+    @Max(9999)
     private Integer quantidadeEstoque;
     @ManyToOne
     @JoinColumn(name = "categoria_id", nullable = false)

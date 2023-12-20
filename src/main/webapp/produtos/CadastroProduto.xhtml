@@ -10,13 +10,16 @@
 	<ui:define name="corpo">
 	<h:form>
 		<h1>Novo Produto</h1>
-		
+		<p:growl id="growl" showDetail="true" />
+
 		<p:toolbar style="margin-top:20px">
 			<p:toolbarGroup>
 
 				<p:button value="Novo" icon="pi pi-plus-circle" outcome="/produtos/CadastroProduto" style="margin-right:5px;background-color: green"/>
-				<p:commandButton value="Salvar" icon="pi pi-check-circle" style="background-color: #c1ff72" id="botaoSalvar" process="@all" action="#{cadastroBean.salvar()}"/>
 
+				<p:commandButton value="Salvar" icon="pi pi-check-circle"
+								 style="background-color: #7cdc04" id="botaoSalvar"
+								action="#{cadastroProdutoBean.salvar()}"  actionListener="#{growlView.showInfo}" update="growl" styleClass="mr-2 ui-button-warning"/>
 			</p:toolbarGroup>
 			
 			<p:toolbarGroup align="right">
@@ -49,7 +52,7 @@
 			<p:spinner id="unitario" size="10" maxlength="10" prefix="$" min="0.0" />
 			
 			<p:outputLabel value="ESTOQUE" for="estoque"/>
-			<p:inputText id="estoque" size="10" maxlength="10"/>
+			<p:inputText id="estoque" size="10" maxlength="5" value="#{cadastroProdutoBean.produto.quantidadeEstoque}" />
 		</p:panelGrid>
 		
 		</h:form>
