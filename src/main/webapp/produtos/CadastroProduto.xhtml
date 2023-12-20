@@ -10,7 +10,7 @@
 	<ui:define name="corpo">
 	<h:form>
 		<h1>Novo Produto</h1>
-		<p:growl id="growl" showDetail="true" />
+		<p:messages/>
 
 		<p:toolbar style="margin-top:20px">
 			<p:toolbarGroup>
@@ -19,7 +19,7 @@
 
 				<p:commandButton value="Salvar" icon="pi pi-check-circle"
 								 style="background-color: #7cdc04" id="botaoSalvar"
-								action="#{cadastroProdutoBean.salvar()}"  actionListener="#{growlView.showInfo}" update="growl" styleClass="mr-2 ui-button-warning"/>
+								action="#{cadastroProdutoBean.salvar()}" styleClass="mr-2 ui-button-warning"/>
 			</p:toolbarGroup>
 			
 			<p:toolbarGroup align="right">
@@ -32,10 +32,10 @@
 		columnClasses="rotulo,campo">
 			
 			<p:outputLabel value="SKU" for="sku"/>
-			<p:inputText id="sku" size="20" maxlength="20"/>
+			<p:inputText id="sku" size="20" maxlength="20" value="#{cadastroProdutoBean.produto.sku}"/>
 			
 			<p:outputLabel value="NOME" for="nome"/>
-			<p:inputText id="nome" size="60" maxlength="80"/>
+			<p:inputText id="nome" size="60" maxlength="80" value="#{cadastroProdutoBean.produto.nome}"/>
 			
 			<p:outputLabel value="CATEGORIA" for="categoria"/>
 			<p:selectOneMenu id="categoria" style="width:125px">
@@ -43,13 +43,12 @@
 			</p:selectOneMenu>
 			
 			<p:outputLabel value="SUBCATEGORIA" for="subcategoria"/>
-			<p:selectOneMenu id="subcategoria" style="width:125px">
+			<p:selectOneMenu id="subcategoria" style="width:125px" value="#{cadastroProdutoBean.produto.categoria}">
 				<f:selectItem itemLabel="Subcategoria" itemValue=""/>
-				
 			</p:selectOneMenu>
 			
 			<p:outputLabel value="VALOR UNITÁRIO" for="@next"/>
-			<p:spinner id="unitario" size="10" maxlength="10" prefix="$" min="0.0" />
+			<p:spinner id="unitario" size="10" maxlength="10" prefix="$" min="0.0" value="#{cadastroProdutoBean.produto.valorUnitario}" />
 			
 			<p:outputLabel value="ESTOQUE" for="estoque"/>
 			<p:inputText id="estoque" size="10" maxlength="5" value="#{cadastroProdutoBean.produto.quantidadeEstoque}" />

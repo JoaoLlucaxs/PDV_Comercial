@@ -2,25 +2,26 @@
 <persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
 
     <persistence-unit name="pdvUP" transaction-type="JTA">
+        <class>com.pdv.model.Produto</class>
         <!-- Provedor JPA -->
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
         <!-- Configurações específicas do provedor (pode variar dependendo do provedor JPA) -->
         <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/cursojavaee" />
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/cursojavaee" />
             <property name="javax.persistence.jdbc.user" value="root" />
             <property name="javax.persistence.jdbc.password" value="admin" />
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 
             <!-- Atualiza o esquema do banco de dados automaticamente -->
             <property name="hibernate.hbm2ddl.auto" value="update"/>
 
             <!-- Mostra as consultas SQL no console (útil para depuração) -->
             <property name="hibernate.show_sql" value="true"/>
-
+            <property name="hibernate.format_sql" value="true" />
 
             <!-- Configuração do dialeto do banco de dados para o Hibernate (pode variar) -->
-            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
 
         </properties>
     </persistence-unit>

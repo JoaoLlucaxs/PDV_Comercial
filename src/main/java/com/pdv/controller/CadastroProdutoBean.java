@@ -9,7 +9,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 
-@ManagedBean
+@Named
 @ViewScoped
 public class CadastroProdutoBean implements Serializable {
     private static final long serialVersionUID=1L;

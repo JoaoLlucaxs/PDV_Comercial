@@ -1,9 +1,12 @@
 package com.pdv.model;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Objects;
@@ -13,16 +16,16 @@ public class Produto implements Serializable {
     @Id
     @GeneratedValue
     private Long id;
+    @NotBlank
+    @Size(max = 10)
     @Column(nullable = false, length = 80)
     private String nome;
     @Column(nullable = false, length = 20, unique = true)
     private String sku;
     @Column(name = "valor_unitario",nullable = false,precision = 10,scale = 2)
     private BigDecimal valorUnitario;
-    @NotNull
+    @NotNull  @Min(0)  @Max(9999)
     @Column(name="quantidade_estoque", nullable = false, length = 5)
-    @Min(0)
-    @Max(9999)
     private Integer quantidadeEstoque;
     @ManyToOne
     @JoinColumn(name = "categoria_id", nullable = false)
