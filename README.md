@@ -48,5 +48,3 @@ Adicione etiquetas de algum lugar, como: [shields.io](https://shields.io/)
 **Back-end:** Jakarta , Jpa , Hibernate, MySQL
 
 **Log**: Log4j
-
-
