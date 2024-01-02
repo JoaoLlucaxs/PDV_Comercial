@@ -11,22 +11,32 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Objects;
 
+@Entity
 public class Produto implements Serializable {
+	private static final long serialVersionUID = 1L;
 
-    @Id
+	@Id
     @GeneratedValue
     private Long id;
+    
     @NotBlank
-    @Size(max = 10)
+    @Size(max = 80)
     @Column(nullable = false, length = 80)
     private String nome;
+    
+    @NotBlank
     @Column(nullable = false, length = 20, unique = true)
     private String sku;
+    
+    @NotNull
     @Column(name = "valor_unitario",nullable = false,precision = 10,scale = 2)
     private BigDecimal valorUnitario;
+    
     @NotNull  @Min(0)  @Max(9999)
     @Column(name="quantidade_estoque", nullable = false, length = 5)
     private Integer quantidadeEstoque;
+    
+    @NotNull
     @ManyToOne
     @JoinColumn(name = "categoria_id", nullable = false)
     private Categoria categoria;

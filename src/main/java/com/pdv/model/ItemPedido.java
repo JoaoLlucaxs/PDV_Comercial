@@ -14,16 +14,21 @@ public class ItemPedido implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    
     @Column(nullable = false,length = 3)
     private Integer quantidade;
+    
     @Column(name = "valor_unitario", nullable = false,precision = 10,scale = 2)
     private BigDecimal valorUnitario;
+    
     @ManyToOne
     @JoinColumn(name = "produto_id")
     private Produto produto;
+    
     @ManyToOne
     @JoinColumn(name = "pedido_id")
     private Pedido pedido;
+    
     public Long getId() {
         return id;
     }
