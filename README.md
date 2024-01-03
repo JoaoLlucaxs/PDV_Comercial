@@ -13,7 +13,7 @@
 - Envio de Detalhes por E-mail
 
 ## Preview 
-<img width=300 src="https://github.com/JoaoLlucaxs/PDV_Comercial/assets/92184255/f5a1b9b4-3fd7-4b69-9404-57161170226f"/>
+<img width=400 src="https://github.com/JoaoLlucaxs/PDV_Comercial/assets/92184255/a4b466d7-d4fc-4f7e-9bb5-64afc92fda13"/>
 
 
 # Quer importar o projeto?
