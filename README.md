@@ -43,10 +43,8 @@ Adicione etiquetas de algum lugar, como: [shields.io](https://shields.io/)
 
 ## Stack utilizada
 
-**Front-end** : JSF , Primefaces versão 12
+**Front-end** : JSF , Primefaces versão 6.0
 
 **Back-end:** Jakarta , Jpa , Hibernate, MySQL
 
 **Log**: Log4j
-
-
