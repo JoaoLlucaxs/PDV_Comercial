@@ -9,7 +9,7 @@
 	<p:toolbar style="margin-top:20px">
 			<p:toolbarGroup>
 				<p:button value="Novo" icon="pi pi-plus" outcome="/pedidos/CadastroPedido"  style="background-color: #ccc"/>
-				<p:commandButton value="Salvar" style="background-color: #81da0e"/>
+				<p:commandButton value="Salvar" action="#{cadastroPedidoBean.salvar()}" style="background-color: #81da0e"/>
 			</p:toolbarGroup>
 			
 			<p:toolbarGroup align="right">

@@ -2,7 +2,12 @@ package com.pdv.serviceException;
 
 public class NegocioException extends RuntimeException {
 
-    public NegocioException(String msg){
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public NegocioException(String msg){
         super(msg);
     }
 }

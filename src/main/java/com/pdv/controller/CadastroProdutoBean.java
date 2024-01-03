@@ -19,7 +19,7 @@ public class CadastroProdutoBean implements Serializable {
         produto=new Produto();
     }
     public void salvar() {
-    		
+    	
     }
 
     public Produto getProduto() {

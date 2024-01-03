@@ -7,6 +7,7 @@
 
     <persistence-unit name="pdvUP" transaction-type="JTA">
         <class>com.pdv.model.Produto</class>
+          <class>com.pdv.model.Pedido</class>
         <!-- Provedor JPA -->
 
         <!-- Configurações específicas do provedor (pode variar dependendo do provedor JPA) -->
