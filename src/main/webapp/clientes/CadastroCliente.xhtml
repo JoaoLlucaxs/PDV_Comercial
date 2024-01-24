@@ -1,0 +1,50 @@
+<ui:composition template="/WEB-INF/template/LayoutPadrao.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    <ui:define name="titulo">Cadastro de Cliente</ui:define>
+
+    <ui:define name="corpo">
+        <h:form>
+
+            <h1>Novo Cliente</h1>
+            <p:messages autoUpdate="true" closable="true" />
+
+            <p:toolbar style="margin-top:20px">
+                <p:toolbarGroup>
+                    <p:commandButton value="Salvar" icon="pi pi-check-circle"
+                                     style="background-color: #7cdc04" id="botaoSalvar"
+                                     action="#{cadastroProdutoBean.salvar()}" styleClass="mr-2 ui-button-warning"/>
+                </p:toolbarGroup>
+
+                <p:toolbarGroup align="right">
+                    <p:button value="Pesquisa Cliente" icon="pi pi-search" outcome="/clientes/PesquisaCliente"/>
+                </p:toolbarGroup>
+
+            </p:toolbar>
+
+            <p:panelGrid columns="2" id="painel" style="width:100%; margin-top:20px; border:1px solid #000;"
+                         columnClasses="rotulo,campo">
+
+                <p:outputLabel value="Nome" for="nome"/>
+                <p:inputText id="nome" size="40" maxlength="80" value=""/>
+
+                <p:outputLabel value="Cpf" for="cpf"/>
+                <p:inputText id="cpf" size="60" maxlength="80" value="#{cadastroProdutoBean.produto.nome}"/>
+
+                <p:outputLabel value="E-mail" for="email"/>
+                <p:inputText id="email" size="35" maxlength="30"/>
+
+                <p:outputLabel value="Data de nascimento"/>
+                <h:panelGroup>
+                    <p:calendar size="10" pattern="dd/MM/yyyy"/>
+                </h:panelGroup>
+            </p:panelGrid>
+
+        </h:form>
+    </ui:define>
+
+</ui:composition>

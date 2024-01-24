@@ -1,0 +1,72 @@
+<ui:composition template="/WEB-INF/template/LayoutPadrao.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    <ui:define name="titulo">Pesquisa Fornecedor</ui:define>
+
+    <ui:define name="corpo">
+        <h:form>
+            <h1>Pesquisar por Fornecedor</h1>
+
+            <p:toolbar style="margin-top:20px">
+                <p:toolbarGroup>
+                    <p:button value="Pesquisar" icon="pi pi-search" style="margin-right:5px; background-color: #ccc"/>
+                </p:toolbarGroup>
+
+                <p:toolbarGroup align="right">
+                    <p:button value="Novo" icon="pi pi-plus" outcome="/fornecedor/CadastroFornecedor" title="Novo" style="background-color: #88e111"/>
+                </p:toolbarGroup>
+
+            </p:toolbar>
+
+            <p:panelGrid columns="2" id="painel" style="width:100%; margin-top:20px; border:1px solid #000;">
+
+                <p:outputLabel value="Nome" for="nome"/>
+                <p:inputText id="nome" size="20" />
+
+                <p:outputLabel value="CPF/CNPJ" for="dados"/>
+                <p:inputText id="dados" size="20" />
+
+            </p:panelGrid>
+
+
+            <p:dataTable id="produtosTable" value="#{pesquisaProdutoBean.produtosFiltrados}"
+                         var="produt" style="marign-top:20px" emptyMessage="Nenhum produto encontrado!" rows="20"
+                         paginator="true" paginatorAlwaysVisible="false" paginatorPosition="bottom">
+
+                <p:column headerText="Tipo" style="text-align:center;width:100px;">
+                    <h:outputText value="JURIDICO"/>
+                </p:column>
+
+                <p:column headerText="Nome/Razão Social" style="text-align:center;">
+                    <h:outputText value="LTDA REE"/>
+                </p:column>
+
+                <p:column headerText="CNPJ/CPF" style="text-align:center;">
+                    <h:outputText value="444.444.444-44"/>
+                </p:column>
+
+                <p:column headerText="CEP" style="text-align:center;">
+                    <h:outputText value="099.888.999-22"/>
+                </p:column>
+
+                <p:column headerText="Ações" style="text-align:center; width:100px;">
+                    <p:button icon="pi pi-pencil" title="editar" style="background-color: green"/>
+                    <p:commandButton icon="pi pi-trash" title="excluir" style="background-color: red" oncomplete="confirmacaoExclusao.show();"/>
+                </p:column>
+            </p:dataTable>
+
+
+            <p:confirmDialog header="Inativar" message="Tem certeza que deseja inativar o produto?"
+                             widgetVar="confirmacaoInativar">
+
+                <p:button value="Não" onclick="return false;"/>
+                <p:commandButton value="Sim" oncomplete="confirmacaoInativar.hide();"/>
+            </p:confirmDialog>
+        </h:form>
+    </ui:define>
+
+</ui:composition>

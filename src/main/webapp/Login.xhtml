@@ -1,4 +1,4 @@
-<ui:composition
+<ui:composition template="/WEB-INF/template/LayoutPadrao.xhtml"
 	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
@@ -10,19 +10,25 @@
 		<ui:define name="corpo">
 			
 			<h:form id="frm">
-				<h1 style="display:flex;justify-content:center;margin-bottom:50px;">Faça Login</h1>
-				
-				<h:panelGrid columns="2" styleClass="grid-login">	
-				
-					<p:outputLabel value="E-mail"/>
-					<p:inputText size="30"/>
-					
-					<p:outputLabel value="Password"/>
-					<p:password size="30"/>
+
+				<h:panelGrid columns="2" styleClass="grid-login" cellpadding="10">
+					<p:outputLabel value="E-mail : "/>
+					<h:panelGroup>
+						<p:inputText size="20" placeholder="Informe seu e-mail"/>
+						<p:graphicImage value="resources/images/pergunta.png" id="icon"/>
+						<p:tooltip for="icon" value="Para entrar no sistema informe um email válido"/>
+					</h:panelGroup>
+
+					<p:outputLabel value="Senha: "/>
+					<h:panelGroup>
+						<p:password size="20"/>
+						<p:graphicImage value="resources/images/pergunta.png" id="icon-password"/>
+						<p:tooltip for="icon-password" value="Para entrar no sistema é necessário a senha que cadastrou"/>
+					</h:panelGroup>
 				
 					<h:panelGroup/>
 					
-					<p:commandButton value="Entrar" style="background-color:#ee4036;border:none; margin-top:15px;"/>
+				<p:commandButton value="Entrar" styleClass="btn_login"/>
 				</h:panelGrid>
 			</h:form>
 		
