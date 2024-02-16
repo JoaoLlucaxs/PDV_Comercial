@@ -13,7 +13,7 @@
 - Sending Details by Email
 
 ## Preview 
-<img width=400 src="https://github.com/JoaoLlucaxs/PDV_Comercial/assets/92184255/a4b466d7-d4fc-4f7e-9bb5-64afc92fda13"/>
+<img width=400 src="https://github.com/JoaoLlucaxs/PDV_Comercial/assets/92184255/6f7f03cf-3a3f-43b3-9238-a4e66618136e"/>
 
 ## My social media
     
