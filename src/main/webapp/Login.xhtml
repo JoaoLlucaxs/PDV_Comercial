@@ -1,36 +1,28 @@
-<ui:composition template="/WEB-INF/template/LayoutPadrao.xhtml"
-	xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://xmlns.jcp.org/jsf/core"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:p="http://primefaces.org/ui">
+<!DOCTYPE html>
+<html lang="pt-br"
+	  xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:f="http://xmlns.jcp.org/jsf/core"
+	  xmlns:h="http://xmlns.jcp.org/jsf/html"
+	  xmlns:p="http://primefaces.org/ui">
 
-	
-	<ui:define name="titulo">Login</ui:define>
-		<ui:define name="corpo">
-			
-			<h:form id="frm">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Login</title>
+	<h:outputStylesheet library="css" name="login.css"/>
+</h:head>
 
-				<h:panelGrid columns="2" styleClass="grid-login" cellpadding="10">
-					<p:outputLabel value="E-mail : "/>
-					<h:panelGroup>
-						<p:inputText size="20" placeholder="Informe seu e-mail"/>
-						<p:graphicImage value="resources/images/pergunta.png" id="icon"/>
-						<p:tooltip for="icon" value="Para entrar no sistema informe um email válido"/>
-					</h:panelGroup>
+<h:body>
+	<div class="login-container">
+		<h:form id="form">
+			<!-- Seu conteúdo de login aqui -->
+			<h:outputLabel for="username" value="E-mail: " />
+			<h:inputText id="username" value="comercial@gmail.com" required="true" />
 
-					<p:outputLabel value="Senha: "/>
-					<h:panelGroup>
-						<p:password size="20"/>
-						<p:graphicImage value="resources/images/pergunta.png" id="icon-password"/>
-						<p:tooltip for="icon-password" value="Para entrar no sistema é necessário a senha que cadastrou"/>
-					</h:panelGroup>
-				
-					<h:panelGroup/>
-					
-				<p:commandButton value="Entrar" styleClass="btn_login"/>
-				</h:panelGrid>
-			</h:form>
-		
-	</ui:define>
-</ui:composition>
+			<h:outputLabel for="password" value="Password: " />
+			<h:inputSecret id="password" value="******" required="true" />
+
+			<h:commandButton value="Login" action="/Home" styleClass="btn" />
+		</h:form>
+	</div>
+</h:body>
+</html>

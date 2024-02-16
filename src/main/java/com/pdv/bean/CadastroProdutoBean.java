@@ -1,4 +1,4 @@
-package com.pdv.controller;
+package com.pdv.bean;
 
 import com.pdv.model.Produto;
 

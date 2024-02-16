@@ -1,10 +1,8 @@
-package com.pdv.controller;
+package com.pdv.bean;
 
 import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 @Named
 @ViewScoped

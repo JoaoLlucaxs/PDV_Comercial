@@ -1,16 +1,15 @@
-package com.pdv.controller;
+package com.pdv.bean;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.faces.view.ViewScoped;
-import javax.inject.Inject;
 import javax.inject.Named;
 
 import com.pdv.model.EnderecoEntrega;
 import com.pdv.model.Pedido;
-import com.pdv.serviceException.NegocioException;
+import com.pdv.exceptions.NegocioException;
 
 
 @Named(value = "cadastroPedidoBean")
