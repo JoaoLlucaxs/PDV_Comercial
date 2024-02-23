@@ -2,31 +2,19 @@
 <persistence  
 			xmlns="http://xmlns.jcp.org/xml/ns/persistence" 
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-			xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
-			version="2.2">
+			xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_0.xsd"
+			version="2.1">
 
-    <persistence-unit name="pdvUP" transaction-type="JTA">
-        <class>com.pdv.model.Produto</class>
-          <class>com.pdv.model.Pedido</class>
-        <!-- Provedor JPA -->
-
-        <!-- Configurações específicas do provedor (pode variar dependendo do provedor JPA) -->
+    <persistence-unit name="PedidoPU" transaction-type="JTA">
         <properties>
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/cursojavaee" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/cursojavaee" />
             <property name="javax.persistence.jdbc.user" value="root" />
-            <property name="javax.persistence.jdbc.password" value="admin" />
+            <property name="javax.persistence.jdbc.password" value="algaworks" />
 
-            <!-- Atualiza o esquema do banco de dados automaticamente -->
-            <property name="hibernate.hbm2ddl.auto" value="update"/>
 
-            <!-- Mostra as consultas SQL no console (útil para depuração) -->
-            <property name="hibernate.show_sql" value="true"/>
-            <property name="hibernate.format_sql" value="true" />
-
-            <!-- Configuração do dialeto do banco de dados para o Hibernate (pode variar) -->
-            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
-
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
         </properties>
     </persistence-unit>
 </persistence>
