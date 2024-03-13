@@ -21,13 +21,15 @@
 		</div>
 		
 		<div style="float:right;margin-right:110px;">
-			<span>Olá Usuário!</span>
-			<h:form>
-			
+
+			<h:form id="frm">
+					<span>Olá Usuário!</span>
+
 				<p:menubar styleClass="menu-sistema" style="margin-left:3px">
-				<p:submenu label="Cadastros" style="background-color:greenyellow; border:5px;">
-					<p:menuitem value="Clientes"/>
+				<p:submenu label="Cadastros" styleClass="subMenu">
+					<p:menuitem value="Clientes" outcome="/clientes/CadastroCliente"/>
 					<p:menuitem value="Usuários"/>
+					<p:menuitem value="Fornecedor" outcome="/fornecedor/CadastroFornecedor"/>
 					<p:separator/>
 					<p:menuitem value="Categorias"/>
 					<p:menuitem value="Produtos" outcome="/produtos/PesquisaProduto"/>
@@ -37,7 +39,9 @@
 					<p:menuitem value="Novo Pedido" outcome="/pedidos/CadastroPedido"/>
 					<p:menuitem value="Pesquisa" outcome="/pedidos/PesquisaPedido"/>
 				</p:submenu>
-					<p:menuitem value="Sair" style="background-color:#ccc"/>
+					<p:submenu label="Configurações">
+						<p:menuitem value="Sair" style="background-color:#ccc" outcome="/Login"/>
+					</p:submenu>
 				</p:menubar>
 			</h:form>
 		</div>
@@ -53,7 +57,7 @@
 	
 	<footer>
 		<p>Sistema completo para gestão de empresa</p>
-		<a href="https://www.linkedin.com/in/jo%C3%A3o-lucas-queiroz/" target="_blank">@João Lucas Queiroz</a>
+		<a href="https://www.linkedin.com/in/jo%C3%A3o-lucas-queiroz/" target="_blank">@João Lucas Queiroz - Todos os direitos reservados</a>
 	</footer>
 </h:body>
 

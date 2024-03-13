@@ -1,4 +1,4 @@
-package com.pdv.serviceException;
+package com.pdv.exceptions;
 
 public class NegocioException extends RuntimeException {
 

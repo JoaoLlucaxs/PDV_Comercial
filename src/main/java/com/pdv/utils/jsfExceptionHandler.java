@@ -1,6 +1,6 @@
 package com.pdv.utils;
 
-import com.pdv.serviceException.NegocioException;
+import com.pdv.exceptions.NegocioException;
 
 import javax.faces.FacesException;
 import javax.faces.application.ViewExpiredException;
