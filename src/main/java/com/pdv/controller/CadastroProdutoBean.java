@@ -1,11 +1,13 @@
 package com.pdv.controller;
 
+import com.pdv.model.Categoria;
 import com.pdv.model.Produto;
 
 import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
+import java.util.List;
 
 @Named(value = "cadastroProdutoBean")
 @ViewScoped
@@ -14,10 +16,13 @@ public class CadastroProdutoBean implements Serializable {
     
     @Inject
     private Produto produto;
+    
+    private List<Categoria> categoriasRaizes;
 
     public CadastroProdutoBean(){
         produto=new Produto();
     }
+    
     public void salvar() {
     	
     }
@@ -25,4 +30,9 @@ public class CadastroProdutoBean implements Serializable {
     public Produto getProduto() {
         return produto;
     }
+    		
+	public List<Categoria> getCategoriasRaizes() {
+		return categoriasRaizes;
+	}
+    
 }
